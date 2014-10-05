@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pratt - Free Bootstrap 3 Theme">
+    <meta name="author" content="Alvarez.is - BlackTie.co">
+    <link rel="shortcut icon" href="/assets/ico/favicon.png">
+
+    <title>Pratt - Free Bootstrap 3 Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/css/main.css" rel="stylesheet">
+    
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+    
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/smoothscroll.js"></script>
+    
+
+  </head>
+
+  <body data-spy="scroll" data-offset="0" data-target="#navigation">
+
+    <!-- Fixed navbar -->
+	    <div id="navigation" class="navbar navbar-default navbar-fixed-top">
+	      <div class="container">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="#"><b>Backito</b></a>
+	        </div>
+	        <div class="navbar-collapse collapse">
+	          <ul class="nav navbar-nav">
+	        <li  class="active"><%= link_to 'Home', welcome_index_path%></li>
+            <li><%= link_to 'Edit', edit_user_registration_path%></li>
+            <li><%= link_to 'Projects', 'proj'%></li>
+            
+	          </ul>
+	          <ul class="nav navbar-nav navbar-right">
+
+	         <% if @se %>
+            <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+            <% end %>
+
+            <% if !@se %>
+			<li><%= link_to('Register', new_user_registration_path) %></li>
+              <li><%= link_to('Log In', new_user_session_path) %></li>
+	        <% end %>
+
+
+				</ul>
+	        </div><!--/.nav-collapse -->
+	      </div>
+	    </div>
+
+
+	<section id="home" name="home"></section>
+	<div id="headerwrap">
+	    <div class="container">
+	    	<div class="row centered">
+	    		<div class="col-lg-12">
+					<h1>Welcome To <b>Backito</b></h1>
+					<h3>Back the next big thing!</h3>
+					<br>
+	    		</div>
+	    		
+	    		<div class="col-lg-2">
+	    			<h5>Innovative Currency</h5>
+	    			<p>Backito uses Ethereum, "Bitcoin 2.0", in order to fund our user's campaigns.</p>
+	    			<img class="hidden-xs hidden-sm hidden-md" src="/assets/img/arrow1.png">
+	    		</div>
+	    		<div class="col-lg-8">
+	    			<img class="img-responsive" src="/assets/img/app-bg.png" alt="">
+	    		</div>
+	    		<div class="col-lg-2">
+	    			<br>
+	    			<img class="hidden-xs hidden-sm hidden-md" src="/assets/img/arrow2.png">
+	    			<h5>No Centralization, No Worries</h5>
+	    			<p>Ethereum is 100% decentralized - the money gets released to the campaign owner <b>only</b> when enough funds are raised.</p>
+	    		</div>
+	    	</div>
+	    </div> <!--/ .container -->
+	</div><!--/ #headerwrap -->
+
+
+	<
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/js/bootstrap.js"></script>
+	<script>
+	$('.carousel').carousel({
+	  interval: 3500
+	})
+	</script>
+  </body>
+</html>

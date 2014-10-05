@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pratt - Free Bootstrap 3 Theme">
+    <meta name="author" content="Alvarez.is - BlackTie.co">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+    <title>Pratt - Free Bootstrap 3 Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/css/main.css" rel="stylesheet">
+    
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+    
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/smoothscroll.js"></script>
+    
+
+  </head>
+
+  <body data-spy="scroll" data-offset="0" data-target="#navigation">
+
+    <!-- Fixed navbar -->
+      <div id="navigation" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><b>Backito</b></a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li  class="active"><%= link_to 'Home', welcome_index_path%></li>
+            <li><%= link_to 'Edit', edit_user_registration_path%></li>
+            <li><%= link_to 'Projects', 'proj'%></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><%= link_to('Register', new_user_registration_path) %></li>
+              <li><%= link_to('Log In', new_user_session_path) %></li>
+
+        </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+
+<h2>Resend confirmation instructions</h2>
+
+<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email, autofocus: true %></div>
+
+  <div><%= f.submit "Resend confirmation instructions" %></div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+
+
+</div> 
+    </div>
+
+
+
+
+
+
+
+      </div>
+
+  </div><!--/ #headerwrap -->
+
+
+  <section id="desc" name="desc"></section>
+  <!-- INTRO WRAP -->
+  <div id="intro">
+    <div class="container">
+      
+      <br>
+      </div> <!--/ .container -->
+  </div><!--/ #introwrap -->
+  
+  <!-- FEATURES WRAP -->
+  <div id="features" style="height: 150px;">
+    <div class="container">
+      <div class="row">
+
+      </div>
+    </div><!--/ .container -->
+  </div><!--/ #features -->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/js/bootstrap.js"></script>
+  <script>
+  $('.carousel').carousel({
+    interval: 3500
+  })
+  </script>
+  </body>
+</html>
+
+

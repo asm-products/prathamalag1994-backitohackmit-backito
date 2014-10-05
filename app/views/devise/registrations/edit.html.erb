@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pratt - Free Bootstrap 3 Theme">
+    <meta name="author" content="Alvarez.is - BlackTie.co">
+    <link rel="shortcut icon" href="/assets/ico/favicon.png">
+
+    <title>Pratt - Free Bootstrap 3 Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/css/main.css" rel="stylesheet">
+    
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+    
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/smoothscroll.js"></script>
+    
+
+  </head>
+
+  <body data-spy="scroll" data-offset="0" data-target="#navigation">
+
+    <!-- Fixed navbar -->
+      <div id="navigation" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><b>Backito</b></a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+          <li ><%= link_to 'Home', welcome_index_path%></li>
+            <li  class="active"><%= link_to 'Edit', edit_user_registration_path%></li>
+            <li><%= link_to 'Projects', 'proj'%></li>
+            
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+
+              
+
+        </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    <div class="container">
+
+
+
+<h2>Edit <%= resource_name.to_s.humanize %></h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email, autofocus: true %></div>
+
+  <div><%= f.label :name %><br />
+  <%= f.text_field :name, autofocus: true %></div>
+
+   <div><%= f.label :ethid %><br />
+  <%= f.text_field :ethid, autofocus: true %></div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+    <%= f.password_field :password, autocomplete: "off" %></div>
+
+  <div><%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+
+  <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.password_field :current_password, autocomplete: "off" %></div>
+
+  <div><%= f.submit "Update" %></div>
+<% end %>
+
+<h3>Cancel my account</h3>
+
+<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+
+<%= link_to "Back", :back %>
+
+
+
+      </div>
+
+  </div><!--/ #headerwrap -->
+
+
+  <section id="desc" name="desc"></section>
+  <!-- INTRO WRAP -->
+  <div id="intro">
+    <div class="container">
+      
+      <br>
+      </div> <!--/ .container -->
+  </div><!--/ #introwrap -->
+  
+  <!-- FEATURES WRAP -->
+  <div id="features" style="height: 150px;">
+    <div class="container">
+      <div class="row">
+
+      </div>
+    </div><!--/ .container -->
+  </div><!--/ #features -->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/js/bootstrap.js"></script>
+  <script>
+  $('.carousel').carousel({
+    interval: 3500
+  })
+  </script>
+  </body>
+</html>
+
+
